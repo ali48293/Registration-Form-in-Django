@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: auto;
+}
+
+body {
+    background: url("why.jpg");
+}
+
+nav {
+    padding: 55px;
+    background: rgba(0, 0, 0, 0.541);
+    margin: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    font-size: 2em;
+    color: white;
+}
+
+ul {
+    margin-left: 50%;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+    padding: 8px;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    /* padding-left: 100px; */
+}
+
+form {
+    width: 55%;
+    padding-left: 5%;
+}
+
+legend {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    /*	background-color: black;*/
+    border-bottom: yellow;
+    color: yellow;
+    font-size: 3em;
+}
+
+fieldset {
+    text-align: center;
+    text-align: center;
+    margin-top: 20%;
+    max-width: 500px;
+    /*	padding: 0 10px;*/
+    overflow: hidden;
+    margin: auto;
+    text-decoration: none;
+}
+
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    /*	margin: 10px 0;*/
+    border: 0;
+    background: #111;
+    padding: 20px;
+    outline: none;
+    color: #ddd;
+    transition: 0.6s;
+    font-size: 1.4em;
+}
+
+input:hover {
+    box-shadow: 0 0 6px 5px;
+    transition: 0.5s;
+}
+
+#btn {
+    float: right;
+    border: 0;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #34495e;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn :hover {
+    background: #2980b9;
+}
+
+.errors {
+    color: red;
+    padding-top: 5%;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bolder;
+}

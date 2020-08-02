@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{%static 'register.css' %}">
+    <title>REGISTER</title>
+</head>
+
+<body class="container">
+
+    <nav>
+        <div class="container">
+            <h1 class="logo">Online Services</h1>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+
+                <li><a href="{% url 'login' %}">Login</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <form action="" method="POST" id="form">
+        <fieldset>
+            <legend>Register Yourself</legend>
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="Your Name" id="input">
+            </><br>
+            <input type="text" name="last_name" placeholder="Your Last Name (Optional)" id="input"> <br>
+            <input type="text" name="username" placeholder="User Name" id="input"> <br>
+            <input type="email" name="email" placeholder="email" id="input"> <br>
+            <input type="password" name="pass1" placeholder="password" id="input"> <br>
+            <input type="password" name="pass2" placeholder="confirm password" id="input"> <br>
+            <input type="submit" id="btn">
+
+        </fieldset>
+        <div class="errors">
+            {% for eachMessage in messages %} {{eachMessage}} {% endfor %}
+
+        </div>
+    </form>
+
+    </div>
+
+</body>
+
+</html>

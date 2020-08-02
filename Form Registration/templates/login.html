@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{%static 'login.css' %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h1 class="logo">Online Services</h1>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+
+                <li><a href="{% url 'register' %}">Register</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <form action="" method="POST" id="form">
+        <fieldset>
+            <legend>Login Portal</legend>
+            {% csrf_token %}
+            <label><input type="text" name="username" placeholder="User Name" id="input"></label> <br>
+            <label><input type="password" name="pass1" placeholder="password" id="input"></label> <br>
+
+            <input type="submit" id="btn">
+
+        </fieldset>
+        <div class="errors">
+            {% for eachMessage in messages %} {{eachMessage}} {% endfor %}
+
+        </div>
+    </form>
+
+    </div>
+
+</body>
+
+</html>
